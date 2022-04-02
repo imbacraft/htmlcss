@@ -1,0 +1,907 @@
+/* ==================================== */
+
+/* ====== */
+/* FONTS */
+/* ====== */
+
+/* ==================================== */
+
+@font-face{
+    font-family: ProximaNova;
+    src: url(./fonts/Mark\ Simonson\ -\ Proxima\ Nova\ Regular.otf);
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: ProximaNova;
+    src: url(./fonts/Mark\ Simonson\ -\ Proxima\ Nova\ Bold.otf);
+    font-weight: bold;
+}
+
+@font-face{
+    font-family: SourceSansPro;
+    src: url(./fonts/SourceSansPro-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: SourceSansPro;
+    src: url(./fonts/SourceSansPro-Bold.ttf);
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* ==================================== */
+
+/* ====== */
+/* BODY */
+/* ====== */
+
+/* ==================================== */
+
+body {
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 1460px;
+    position: relative;
+
+
+}
+a:hover{
+
+    cursor: url(images/handpointer.svg), auto;
+}
+
+
+
+
+
+
+/* ==================================== */
+
+/* ====== */
+/* HEADER */
+/* ====== */
+
+/* ==================================== */
+
+header {
+    background: url("./images/bg.png") bottom center no-repeat;
+    background-size: cover;
+    height: 750px;
+}
+
+#topbar{
+    height: 70px;
+
+}
+
+#topbar #humanicon{
+    position: absolute;
+    right: 300px;
+    top: 23px;
+    
+
+}
+
+#topbar a {
+    position: absolute;
+    top: 23px;
+    right: 180px;
+    font-family: SourceSansPro;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#topbar #clockicon{
+    position: absolute;
+    left: 293px;
+    top: 31px;
+
+}
+
+#topbar #time{
+    position: absolute;
+    display: inline;
+    width: 60px;
+    height: 32px;
+    left: 318px;
+    top: 0px;
+    font-family: ProximaNova;
+    font-size: 26px;
+    font-weight: normal;
+    color: #FFFFFF;
+    
+
+}
+
+#topbar #timelabel{
+    position: absolute;
+    display: inline;
+    left: 318px;
+    font-family: SourceSansPro;
+    font-weight: bold;
+    font-size: 12px;
+    height: 15px;
+    line-height: 15px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+
+}
+
+#topbar #weathericon{
+    position: absolute;
+    left: 397px;
+    top: 31px;
+
+}
+
+#topbar #temperature{
+    position: absolute;
+    display: inline;
+    width: 60px;
+    height: 32px;
+    left: 423px;
+    top: 0px;
+    font-family: ProximaNova;
+    font-size: 26px;
+    font-weight: normal;
+    color: #FFFFFF;
+
+}
+
+#topbar #fahrenheit{
+    position: absolute;
+    display: inline;
+    width: 60px;
+    height: 32px;
+    left: 473px;
+    top: 0px;
+    font-family: ProximaNova;
+    font-size: 26px;
+    font-weight: normal;
+    color: #FFFFFF;
+    opacity: 0.4;
+
+}
+
+#topbar #weatherlabel{
+    position: absolute;
+    display: inline;
+    left: 423px;
+    font-family: SourceSansPro;
+    font-weight: bold;
+    font-size: 12px;
+    height: 15px;
+    line-height: 15px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+
+}
+
+
+#topbar #dropdownpointer{
+    position: absolute;
+    top: 26px;
+    right: 87px;
+}
+
+#topbar #greekflag{
+    position: absolute;
+    top: 26px;
+    right: 100px;
+}
+
+#dropdownpointer{
+    position: absolute;
+    top: 30px;
+    right: 280px;
+    width: 14px;
+    height: 14px;
+    background: none;
+    border: none;
+}
+
+#dropdownpointer:hover{
+    cursor: url(images/handpointer.svg), auto;
+}
+
+nav#topnav{
+    height: 60px;
+    background: white;
+    border-radius: 4px;
+    position: relative;
+
+}
+
+#main-menu{
+    margin: 0;
+    padding: 0px 40px 0 280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    list-style: none;
+
+}
+
+#main-menu a{
+    color: #002868;
+    font-family: ProximaNova;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+#main-menu a:hover{
+    color: #BF0A30;
+}
+
+.dropdown{
+    position: absolute;
+    left: 268px;
+    top: 73px;
+    width: 275px;
+    height: 350px;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.35);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-top: 16px;
+    gap: 10px;
+    visibility: hidden;
+    
+}
+
+#omospondia:hover +.dropdown{
+    visibility: visible;
+    
+}
+
+#omospondia:not(:hover)+.dropdown{
+    visibility: hidden;
+    transition: visibility 4s;
+}
+
+
+#main-menu .dropdown a {
+    font-family: SourceSansPro;
+    font-weight: bold;
+    font-size: 14px;
+    height: 18px;
+    line-height: 18px;
+    color: #002868;
+}
+
+#main-menu .dropdown a:hover{
+    color: #BF0A30;
+}
+
+#main-menu #topmail{
+    position: absolute;
+    top: 18px;
+    right: 25px;
+}
+
+#logo{
+    position: absolute;
+    display: block;
+    border: 10px solid #AB0427;
+    border-radius: 100%;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+#logo img{
+    display: block;
+}
+
+#panarcadianfoundation{
+    position: absolute;
+    top: 150px;
+    left: 293px;
+}
+
+#featured {
+    background: url(./images/circle.png);
+    background-size: 100% 100%;
+    width: 410px;
+    height: 410px;
+    margin: 70px auto 0;
+    border: 6px solid white;
+    border-radius: 100%;
+    box-shadow: 0 0 40px rgba(0,0,0, 0.25);
+    text-align: center;
+    color: white;
+    padding: 40px;
+}
+
+#featured h3 {
+    font-family: SourceSansPro;
+    font-weight: bold;
+    margin: 10px 0 30px;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+#featured h2 {
+    font-size: 24px;
+    font-family: SourceSansPro;
+    font-weight: bold;
+    margin: 0 0 30px;
+
+}
+
+#featured p {
+    font-family: SourceSansPro;
+    font-weight: normal;
+    font-size: 16px;
+    margin: 0px 0 30px;
+    line-height: 25px;
+}
+
+#featured a {
+    color: white;
+    font-family: SourceSansPro;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid white;
+    width: 200px;
+    height: 50;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 16px;
+
+}
+
+.container{
+    width: 1360px;
+    margin: 0 auto;
+}
+
+
+
+
+
+/* ==================================== */
+
+/* ===== */
+/* MAIN */
+/* ===== */
+
+/* ==================================== */
+
+main{
+    background: url(./images/bg2.png) bottom center no-repeat;
+    height: 744px;
+    background-color: #F8F8F8;
+    border: 1px solid #000000;
+    position: relative;
+
+}
+
+#treelogo{
+    position: absolute;
+    top: 40px;
+    left: 48.84%; 
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    
+
+
+}
+
+#greekroots {
+    position: absolute;
+    top: 140px;
+    left: 41.23%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    
+}
+
+main h1{
+    position: absolute;
+    font-family: SourceSansPro;
+    font-weight: bold;
+    font-size: 48px;
+    color: #BF0A30;
+    height: 50px;
+    left: 29.04%;
+    top: 200px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+#textleft{
+    position: absolute;
+    top: 312px;
+    left: 15.89%;
+    width: 464px;
+    height: 245px;
+
+}
+
+#textleft h2, #textright h2{
+    font-family: SourceSansPro;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    color: #002868;
+
+
+}
+
+#textleft h3{
+    font-family: SourceSansPro;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+    color: #333333;
+
+
+}
+
+#textleft p{
+    font-family: SourceSansPro;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    color: #333333;
+
+}
+
+#textright{
+    position: absolute;
+    top: 312px;
+    right: 15.68%;
+    width: 475px;
+    height: 245px;
+
+}
+
+#textright ul{
+    padding: 10px;
+    font-family: SourceSansPro;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    color: #333333;
+    list-style-image: url(images/listpointer.svg);
+    
+}
+
+
+
+
+
+/* ==================================== */
+
+/* ====================== */
+/* ΕΡΓΑ ΚΑΙ ΔΡΑΣΤΗΡΙΟΤΗΤΕΣ*/
+/* ====================== */
+
+/* ==================================== */
+
+#erga{
+    height: 650px;
+    background-color: #002868;
+    position: relative;
+}
+
+#erga #bottommaiandros {
+    position: absolute;
+    top: 40px;
+    left: 718px;
+
+}
+
+#erga h3{
+    position: absolute;
+    top: 74px;
+    left: 642.5px;
+    font-family: Source Sans Pro;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+
+}
+
+#erga .box{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 80px;
+}
+
+#erga #bottommore{
+    position: absolute;
+    top: 560px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: SourceSansPro;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid white;
+    height: 50;
+    width: 200px;
+    text-decoration: none;
+    padding: 16px;
+}
+
+
+.item{
+    width: 300px;
+    height: 413px;
+    margin: 119px auto;
+    position: relative;
+
+}
+
+.item img{
+    margin: 0 auto;
+
+}
+.item a{
+    color: white;
+    font-family: SourceSansPro;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 4px;
+    height: 46px;
+    width: 116px;
+    text-decoration: none;
+    padding: 14px;
+    position: absolute;
+    top: 380px;
+    left: 20px;
+}
+
+
+.item h2{
+    font-family: SourceSansPro;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color:#FFFFFF;
+
+}
+
+.item p{
+    font-family: SourceSansPro;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+.item .morepointer{
+    position: absolute;
+    top: 391px;
+    left: 5px;
+
+}
+
+
+
+
+
+/* ==================================== */
+
+/* ====================== */
+/* ΦΟΡΜΑ ΕΠΙΚΟΙΝΩΝΙΑΣ*/
+/* ====================== */
+
+/* ==================================== */
+
+#formcontainer{
+    height: 680px;
+    background-color:  #FFFFFF;
+    position: relative;
+    margin-top: 0cm;
+}
+
+#formcontainer h3 {
+    position: absolute;
+    top:55px;
+    width: 92px;
+    height: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: SourceSansPro;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 2px;
+    color:  #002868;
+}
+
+#form{
+    position: absolute;
+    top: 97px;
+    width: 740px;
+    height: 420px;
+    border-top: solid #EEEEEE 1px;
+    border-bottom: solid #EEEEEE 1px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0px;
+
+}
+
+#form label{
+    font-family: SourceSansPro;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.15px;
+    color:  #333333;
+    align-self: flex-start;
+    margin-left: 60px;
+    margin-top: 10px;
+    margin-bottom: 5.5px;
+
+
+}
+
+#form input{
+    width: 619px;
+    height: 46px;
+    border: solid #B6B6B6 1px;
+    border-radius: 4px;
+
+}
+
+#form input:focus{
+    outline: none;
+}
+
+#phonecontainer{
+    border: solid #B6B6B6 1px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    max-width: 615px;
+    padding-left: 10px;
+}
+
+#form #phone {
+    width: 605px;
+    border: none;
+    
+}
+
+#form #phoneicon{
+    margin-right: 5px;
+}
+
+#emailcontainer{
+    border: solid #B6B6B6 1px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    max-width: 615px;
+    padding-left: 10px;
+
+}
+
+#form #email {
+    width: 605px;
+    border: none;
+    
+}
+
+#form #formemailicon{
+    margin-right: 5px;
+}
+
+#form #message{
+    width: 619px;
+    height: 123px;
+    border: solid #B6B6B6 1px;
+    border-radius: 4px;
+    resize: none;
+
+}
+
+#form #message:focus{
+    outline: none;
+}
+
+#formbutton{
+    width: 240px;
+    height: 50px;
+    position: absolute;
+    top: 540px;
+    left: 805px;
+    background-color: #BF0A30;
+    font-family: SourceSansPro;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    background-image: url(images/bottomarrow.svg);
+    background-repeat: no-repeat;
+    background-position: 216px 50%;
+
+}
+
+#formbutton:hover{
+    cursor: url(images/handpointer.svg), auto;
+}
+
+
+
+
+
+
+/* ==================================== */
+
+/* ====================== */
+/* RETURN TO TOP*/
+/* ====================== */
+
+/* ==================================== */
+
+#returntotop{
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    top: 2805px;
+    right: 100px;
+    border-radius: 100%;
+    background-color: #BF0A30 ;
+    overflow-x: visible;
+    background-image: url(images/backtotoparrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
+
+#returntotop:hover{
+
+    cursor: url(images/handpointer.svg), auto;
+}
+
+
+
+
+
+
+
+/* ==================================== */
+
+/* ====================== */
+/* FOOTER*/
+/* ====================== */
+
+/* ==================================== */
+
+footer{
+
+    height: 400px;
+    background-color:  #002868;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    padding-top: 30px;
+
+}
+
+#bottompanarcadianfoundation{
+    margin-top: 20px;
+}
+
+#socialmedia{
+    margin-top: 27px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 30px;
+
+}
+
+#facebook{
+    width: 40px;
+    height: 40px;
+    background-image: url(images/facebook.svg);
+    border-radius: 100%;
+    border: none;
+}
+
+#twitter{
+    width: 40px;
+    height: 40px;
+    background-image: url(images/twitter.svg);
+    border-radius: 100%;
+    border: none;
+}
+
+#linkedin {
+    width: 40px;
+    height: 40px;
+    background-image: url(images/linkedin.svg);
+    border-radius: 100%;
+    border: none;
+}
+
+#instagram{
+    width: 40px;
+    height: 40px;
+    background-image: url(images/instagram.svg);
+    border-radius: 100%;
+    border: none;
+
+}
+
+#youtube{
+    width: 40px;
+    height: 40px;
+    background-image: url(images/youtube.svg);
+    border-radius: 100%;
+    border: none;
+}
+
+#bottom-menu{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+    list-style: none;
+    margin-top: 30px;
+    height: 30px;
+    margin-bottom: 0px;
+}
+
+#bottom-menu a{
+    font-family: SourceSansPro;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#copyright{
+    width: 249px;
+    font-family: SourceSansPro;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+    opacity: 50%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    
+
+}
